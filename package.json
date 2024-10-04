@@ -1,14 +1,14 @@
 {
   "name": "backend-frist-project",
   "version": "1.0.0",
-  "description": "frist backend project",
+  "description": "first backend project",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config src/index.js"
   },
   "keywords": [
-    "javaScripy",
+    "javascript",
     "backend",
     "chai"
   ],
@@ -17,5 +17,10 @@
   "devDependencies": {
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
   }
 }
