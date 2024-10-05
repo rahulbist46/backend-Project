@@ -10,12 +10,22 @@ dotenv.config({
 
 
 connectDb()
+.then(()=>{
+    app.listen(process.env.PORT || 8000, ()=>{
+        console.log(`Sever is running at port ${process.env.PORT} `);
+        
+    })
+})
+.catch((err)=>{
+    console.log("MONGODB connections is failed",err);
+    
+})
 
 
 
 
 /*
-import express from "express"
+import express from "express" 
 
 const app=express()
 (async()=>{
